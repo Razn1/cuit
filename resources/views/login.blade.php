@@ -17,9 +17,16 @@
             <span class="ml-2">{{ session('error') }}</span>
         </div>
         @endif
+        @if(session('success'))
+        <div class="bg-green-100 border items-center text-green-700 px-4 py-3 rounded mb-4" role="alert"></div>
+            <span class="font-medium">Success!</span>
+            <span class="ml-2">{{ session('success') }}</span>
+        </div>
+        @endif
+        
         <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">Welcome Back</h2>
 
-        <form action="/login" method="POST">
+        <form action="{{ route('login.post') }}" method="POST">
             @csrf
             <div class="mb-4">
                 <label class="block text-sm mb-1">Email</label>

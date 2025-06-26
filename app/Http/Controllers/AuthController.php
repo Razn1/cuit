@@ -22,7 +22,7 @@ class AuthController extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password),
         ]);
-        return redirect('/login');
+        return redirect('/log')->with('success', 'Registration successful, please login');
     }
 
     public function showLogin()

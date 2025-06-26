@@ -13,7 +13,7 @@
     <div class="w-full max-w-md bg-white rounded-xl shadow-lg p-8">
         <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">Register to Cuit</h2>
 
-        <form action="/register" method="POST">
+        <form action="{{ route('register.post') }}" method="POST">
             @csrf
             <div class="mb-4">
                 <label class="block text-sm mb-1">Username</label>
